@@ -8,9 +8,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://Koomita.github.io/favicon.ico?v=1638925134358">
+<link rel="shortcut icon" href="https://Koomita.github.io/favicon.ico?v=1638926010109">
 <link rel="stylesheet" href="https://Koomita.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,12 +25,17 @@
 
 
     <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+🤝
 
 🏠 关于本站
+收录我的各种学习笔记。
 👨‍💻 博主是谁
+bug专业户。
 ⛹ 兴趣爱好
+学习，只要学不死就往死里学。
+终极爱好是躺平（并不。
 📬 联系我呀
+leesiuhaoct23@gmail.com
 ..." />
     <meta name="keywords" content="" />
   </head>
@@ -35,7 +46,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://Koomita.github.io">
-        <img src="https://Koomita.github.io/images/avatar.png?v=1638925134358" class="site-logo">
+        <img src="https://Koomita.github.io/images/avatar.png?v=1638926010109" class="site-logo">
         <h1 class="site-title">女子特困生の日常</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -74,6 +85,10 @@
     <div class="social-container">
       
         
+          <a class="social-link" href="https://github.com/Koomita" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
       
         
       
@@ -102,17 +117,28 @@
             
             <div class="post-content" v-pre>
               <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+<p>🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
+<p>收录我的各种学习笔记。</p>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<p>bug专业户。</p>
 <h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<p>学习，只要学不死就往死里学。<br>
+终极爱好是躺平（并不。</p>
 <h2 id="联系我呀">📬 联系我呀</h2>
+<p>leesiuhaoct23@gmail.com</p>
 
             </div>
             
             
 
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
             
 
           </div>
@@ -136,6 +162,34 @@ var app = new Vue({
 </script>
 
 
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '6072350b028b080695e5',
+        clientSecret: '8a33c47804721821ce2aad53f063333699e69b59',
+        repo: 'blog comment',
+        owner: 'Koomita',
+        admin: ['Koomita'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
